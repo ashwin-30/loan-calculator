@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Payment Calculator - Calculate Monthly Payments Easily</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <h2>Loan Calculator(In Dollers "$")</h2>
+    <div class="container">
+        <!-- form -->
+        <form id="loan-form">
+            <div id="loanAmountDiv">
+                <label for="loanAmount">Loan Amount:</label>
+                <input
+                    type="number"
+                    id="loanAmount"
+                    placeholder="Enter loan amount"
+                    aria-labelledby="loanAmountLabel"
+                />
+            </div>
+
+            <div id="loanTermDiv">
+                <label for="loanTerm">Loan term in months:</label>
+                <input
+                    type="number"
+                    id="loanTerm"
+                    placeholder="Enter loan term"
+                    aria-labelledby="loanTermLabel"
+                />
+            </div>
+
+            <div id="interestDiv">
+                <label for="interest" id="interestLabel">Interest rate per year(%):</label>
+                <input
+                    type="number"
+                    id="interest"
+                    placeholder="Enter interest rate"
+                    aria-labelledby="interestLabel"
+                />
+            </div>
+
+            <input type="submit" id="calculate" value="Calculate" />
+        </form>
+
+        <!-- result -->
+        <div id="result">
+            <p id="mPay">Monthly Payment <span id="monthlyPayment"></span></p>
+            <div id="mPayment">$0</div>
+
+            <div id="principalDiv">
+                <p>Total Principal paid: <span id="principal">$0</span></p>
+                <hr />
+            </div>
+
+            <div id="interestResultDiv">
+                <p>Total Interest paid: <span id="totalInterest">$0</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
