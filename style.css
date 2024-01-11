@@ -135,7 +135,7 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     h2 {
         padding-top: 20px;
         margin-top: 30px;
@@ -166,5 +166,13 @@ input[type="submit"]:hover {
     .container
     {
         flex-direction: column;
+    }
+    form
+    {
+        order: 2;
+    }
+    #result
+    {
+        order: 1;
     }
 }
