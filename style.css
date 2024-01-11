@@ -25,7 +25,7 @@ h2 {
 
 .container {
     width: 60%;
-    height: 40%;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -36,7 +36,7 @@ h2 {
 }
 
 form {
-    width: 90%;
+    width: 100%;
     height: 70%;
     margin: auto;
     padding: 40px;
@@ -56,7 +56,7 @@ form div {
 }
 
 form label {
-    width: 50%; 
+    width: 50%;
     margin-right: 10px;
     font-size: large;
     font-weight: bold;
@@ -64,47 +64,44 @@ form label {
     color: #000000;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);
     display: inline-block;
-    
 }
 
 form input {
-    width: 50%; 
+    width: 50%;
     font-size: 16px;
     height: 30px auto;
     padding: 5px;
     border: 1px solid #fefefe;
     border-radius: 5px;
-    box-shadow:0px 0px 5px  #ffffff;
-    background-color:#fefefe;
+    box-shadow: 0px 0px 5px #ffffff;
+    background-color: #fefefe;
     margin: 5px auto;
     text-align: center;
     align-items: center;
 }
 
-form input:focus
-{
+form input:focus {
     outline: none;
-    box-shadow:0px 0px 15px #426c03;
+    box-shadow: 0px 0px 15px #426c03;
 }
 
-input[type="submit"]
-{
+input[type="submit"] {
     width: 30%;
-    font-size: 16px; 
+    font-size: 16px;
     padding: 12px;
     margin-top: 10px;
     background-color: #95c152;
     border: none;
     border-radius: 5px;
-    color:#000000;
+    color: #000000;
     cursor: pointer;
     transition: background-color 0s ease;
 }
 
-input[type="submit"]:hover
-{
+input[type="submit"]:hover {
     background-color: #547b19;
 }
+
 #result {
     width: 50%;
     height: 70%;
@@ -112,24 +109,24 @@ input[type="submit"]:hover
     padding: 40px;
     color: #ffffff;
     border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2); 
-    background-color: #547b19; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #547b19;
 }
 
-#mPay{
+#mPay {
     text-align: center;
     font-size: 20px;
     padding-bottom: 0;
     margin-bottom: 0;
     margin-top: 0;
 }
-#result span
-{
+
+#result span {
     color: #000;
     font-weight: bolder;
 }
-#mPayment
-{
+
+#mPayment {
     font-size: 70px;
     font-weight: bold;
     color: #000000;
@@ -138,3 +135,36 @@ input[type="submit"]:hover
     text-align: center;
 }
 
+@media (max-width: 600px) {
+    h2 {
+        padding-top: 20px;
+        margin-top: 30px;
+        font-size: 15px;
+    }
+
+    form label {
+        font-size: medium;
+    }
+
+    form input {
+        font-size: 11px;
+    }
+
+    input[type="submit"] {
+        font-size: 13px;
+    }
+
+    #mPayment {
+        font-size: 70px;
+    }
+    .container,
+    form,
+    #result {
+        width: 80%;
+        padding: 10px;
+    }
+    .container
+    {
+        flex-direction: column;
+    }
+}
